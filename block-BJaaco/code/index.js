@@ -7,12 +7,21 @@ let collection = []
 collection.push(numbers,userIds);
 // 2. Add all the even numbers from both arrays numbers and userIds into a newly created array named `evenCollection`
 let evenCollection = []
-for (var i = 0; i < collection.length; i++) {
-  evenCollection.push(collection[2 * i + 1]);
+
+for (let num of collection) {
+  if ( num%2== 0) {
+    evenCollection.push(num);
+  }
 }
-
 // 3. Add all the odd numbers from both arrays numbers and userIds into a newly created array named `oddCollection`
+let oddCollection = []
 
+for (let num of collection) {
+  if ( num%2 !== 0) {
+    oddCollection.push(num);
+  }
+}
+console.log(oddCollection,evenCollection); 
 /*
   @param means parameter
 
@@ -88,14 +97,23 @@ console.log(revert(['Ryan', 'John', 'Bran'])); //['Bran', 'John', 'Ryan']
     clear(['Ryan', null, 0,  'John', 'Bran']); //['Bran', 'John', 'Ryan']
 */
 
-function clear() {
-  // your code
+function clear(arr) {
+  let finall = [];
+if (value == false ||
+  value == null || 
+  value == "" ||
+  value == undefined ||
+  value == 0 )
+  for(let value of arr) {
+  finall.push(value);
+}
+return finall;
 }
 
 // Uncomment the code below and test the output
-// console.log(clear([1, 2, 3, 4, '', 0, null, undefined])); // [4, 3, 2, 1]
-// console.log(clear(['a', undefined, 'd', 0, 'c', 'b'])); // ['b', 'c', 'd', 'a']
-// console.log(clear(['Ryan', null, 0, 'John', 'Bran'])); //['Bran', 'John', 'Ryan']
+console.log(clear([1, 2, 3, 4, '', 0, null, undefined])); // [4, 3, 2, 1]
+console.log(clear(['a', undefined, 'd', 0, 'c', 'b'])); // ['b', 'c', 'd', 'a']
+console.log(clear(['Ryan', null, 0, 'John', 'Bran'])); //['Bran', 'John', 'Ryan']
 
 /*
 
