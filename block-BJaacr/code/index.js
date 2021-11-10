@@ -19,29 +19,33 @@ Hint: (Structure of got variable)
 */
 
 // 1. Log the value of key "houses"
+console.log(got.houses);
 
 // 2. Log the length of the "houses" key
-
+console.log(got.houses.length);
 // 3. Log the name of all houses in got one by one
+console.log(got.houses);
 
 // 4. Log the name of all the people in house Starks (index 0) one by one
-
+console.log(got.houses[0].people[0].name);
 // 5. Log the name of all the people in house Lannisters (index 1) one by one
-
+console.log(got.houses[1].people[1].name);
 // 6. Log the description of all the people in house Lannisters (index 1) one by one
-
+console.log(got.houses[1].people[1].description);
 // 7. Log the name and description of all the people in house Lannisters (index 1) one by one like `I am [name] and my bio is [description]`
-
+console.log(got.houses[1])
 // 8. Log the name and description of all the people in house Starks (index 0) one by one like `I am [name] and my bio is [description]`
-
+console.log(got.houses[0].people[0])
 // 9. Log the name and description of the people in house Starks whose name is `Robb Stark`
-
+console.log(got.houses[0].people[2]);
 // 10. Log the name and description of the people in house Lannisters whose name is `Tywin Lannister`
-
+console.log(got.houses[1].people[0]);
 // 11. Push the name of the houses in an array named `houseNames` and Log the array
-
+// let houseNames = [];
+// houses.push(houseNames);
+// console.log(houseNames);
 // 12. Log the size of people in Starks house
-
+console.log(got.houses[0].people[0].length)
 // 13. Log the size of people in Lannisters house
 
 // 14. Add the name and size of people in an object like {Starks: 4, Lannisters: 6} and log the object
